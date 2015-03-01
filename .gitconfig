@@ -1,0 +1,13 @@
+[user]
+	email = theeban@intersect.org.au
+	name = Theeban Soundararajan
+[alias]
+	st = status
+	aa = add -A
+	cm = commit -m
+	ca = commit -a -m
+	co = checkout
+[github]
+	user = theeban275
+[push]
+	default = simple
