@@ -1,31 +1,49 @@
-"color molokai
-set guifont=DejaVu\ Sans\ Mono\ 12
+"set background=light
+"colorscheme solarized
+set guifont=Monaco\ 12
 set hidden
 
+" set quick buffer switching
 function SwitchBuffer()
-  b#
+ b#
 endfunction
-nmap <Tab> :call SwitchBuffer()<CR>
+map <C-Tab> :call SwitchBuffer()<CR>
 
 "set number format to be decimal
 "set nrformats=10
 
+" set word wrapping
 set wrap linebreak nolist
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
+let g:EasyMotion_smartcase = 1
 " Bi-directional find motion
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
-nmap s <Plug>(easymotion-s)
+"nmap s <Plug>(easymotion-s)
 " or
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-s2)
-
+"nmap s <Plug>(easymotion-s2)
 " Turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
 
 " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" Unite
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+noremap <C-p> :Unite -start-insert -prompt=> -prompt-direction=below -horizontal -direction=below -winheight=10 file_rec/async<CR>
+noremap <Leader>f :Unite -prompt=> -prompt-direction=below -horizontal -direction=below -winheight=10 -no-quit -keep-focus grep:.<CR>
+noremap <Leader>y :Unite -prompt=> -prompt-direction=below -horizontal -direction=below -winheight=10 history/yank<CR>
+"noremap <Leader><Tab> :Unite -prompt=> -prompt-direction=below -horizontal -direction=below -winheight=10 -quick-match buffer<CR>
+
+" configure trailing whitespace
+let g:extra_whitespace_ignored_filetypes = ['unite']
+
+" configure buffergator
+let g:buffergator_viewport_split_policy = "B"
+let g:buffergator_autoupdate = 1
+let g:buffergator_split_size = 10
+let g:buffergator_display_regime = "bufname"
