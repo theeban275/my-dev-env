@@ -1,0 +1,6 @@
+colorscheme ir_black
+set nofoldenable
+set wrap
+set guifont=Monaco\ 14
+set nospell
+let g:airline_theme="dark"
