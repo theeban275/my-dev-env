@@ -2,15 +2,19 @@ set nofoldenable
 set wrap
 set guifont=Inconsolata\ Medium\ 16
 set nospell
-let g:airline_theme="dark"
 let g:neosnippet#snippets_directory='~/.snippets,~/.vim/bundle/vim-snippets/snippets'
 
 " Remove trailing spaces
 function! TrimWhiteSpace()
   %s/\s\+$//e
 endfunction
+let g:bufferline_echo=0
 
 autocmd FileType ruby,python,javascript,html,erb,css,scss autocmd BufWritePre * :call TrimWhiteSpace()
 
 set tabstop=2
 set shiftwidth=2
+if has('gui')
+    set background=light
+    let g:airline_theme="solarized"
+endif
