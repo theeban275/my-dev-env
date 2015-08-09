@@ -2,8 +2,10 @@ set wrap
 set nospell
 set nofoldenable
 
-" works well with dark theme
-let g:airline_theme="dark"
+set guifont=Monaco\ 12
+set background=light
+colorscheme solarized
+let g:airline_theme="solarized"
 
 " fix bug with bufferline
 let g:bufferline_echo=0
@@ -13,4 +15,3 @@ function! TrimWhiteSpace()
   %s/\s\+$//e
 endfunction
 autocmd FileType ruby,python,javascript,html,erb,css,scss autocmd BufWritePre * :call TrimWhiteSpace()
-
