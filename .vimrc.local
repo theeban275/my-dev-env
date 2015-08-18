@@ -2,7 +2,7 @@ set wrap
 set nospell
 set nofoldenable
 
-set guifont=Monaco\ 12
+set guifont=Droid\ Sans\ Mono\ 12
 set background=light
 colorscheme solarized
 let g:airline_theme="solarized"
