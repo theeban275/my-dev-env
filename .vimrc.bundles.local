@@ -1,1 +1,3 @@
-Bundle 'szw/vim-ctrlspace'
+UnBundle 'Lokaltog/vim-easymotion'
+UnBundle 'nathanaelkane/vim-indent-guides'
+Bundle 'NLKNguyen/papercolor-theme'

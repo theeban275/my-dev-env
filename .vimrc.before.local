@@ -3,4 +3,4 @@ let g:spf13_no_autochdir = 1
 let g:spf13_no_views = 1
 
 " remove neocomplete group
-let g:spf13_bundle_groups=['general', 'writing', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
+let g:spf13_bundle_groups=['general', 'writing', 'programming']
