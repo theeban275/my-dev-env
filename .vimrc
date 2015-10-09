@@ -127,6 +127,8 @@ noremap k gk
 map <S-H> gT
 map <S-L> gt
 cmap w!! w !sudo tee % >/dev/null
+vnoremap > ><CR>gv 
+vnoremap < <<CR>gv
 
 " Clipboard Settings
 if has('clipboard')
@@ -167,3 +169,5 @@ command! Strip call StripTrailingWhitespace()
 
 " Misc Settings
 let mapleader=','
+
+" TODO Stripping whitespaces on save for files / make it toggable
