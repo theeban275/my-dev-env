@@ -17,6 +17,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'rking/ag.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'godlygeek/tabular'
 call vundle#end()
 
 " Functions
