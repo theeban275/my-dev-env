@@ -2,9 +2,22 @@
 
 My developer environment
 
-VIM Plugins
-argtextobj.vim  CamelCaseMotion  gist-vim  unite.vim  vim-airline
-vim-indent-object  vimproc.vim  vim-qargs  vim-textobj-rubyblock
-vim-textobj-user
+Prerequisties
+1. Vim
+2. Ack
 
-Hello world
+Installation Insturctions
+1. Copy dot files
+```
+cp . ~/
+```
+
+2. Install Vundle
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+3. Install Vim Plugins
+```
+vim +BundleInstall +BundleClean +qa
+```
