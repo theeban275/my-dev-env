@@ -7,9 +7,28 @@
 	cm = commit -m
 	ca = commit -a -m
 	co = checkout
+	rc = rebase --continue
+	amend = commit --amend --no-edit
+	branch-name = rev-parse --abbrev-ref HEAD
+	squash = !git rebase -i $(git merge-base $(git branch-name) origin/master)
+	review = !git diff origin/master | tig
+	up = !git fetch origin && git rebase -i origin/master
 [github]
 	user = theeban275
 [push]
 	default = simple
 [diff]
-	tool = vimdiff
+	tool = tig
+[merge]
+	ff = only
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/theeban/.gitignore_global
+[color]
+	ui = auto
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
